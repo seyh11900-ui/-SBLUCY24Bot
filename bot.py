@@ -1,3 +1,4 @@
+import os
 import asyncio
 import logging
 from telegram import Update
@@ -12,7 +13,7 @@ from telegram.ext import (
 # -------------------------------------------------------------------
 # CONFIGURATION
 # -------------------------------------------------------------------
-BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"  # Replace with your token from @BotFather
+BOT_TOKEN = os.environ.get("BOT_TOKEN")  # Replace with your token from @BotFather
 
 BOT_DESCRIPTION = (
     "Welcome to My Helper Bot! 👋\n\n"
